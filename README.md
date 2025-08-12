@@ -51,6 +51,22 @@ boltz predict input_path --use_msa_server
 ### Binding Affinity Prediction
 There are two main predictions in the affinity output: `affinity_pred_value` and `affinity_probability_binary`. They are trained on largely different datasets, with different supervisions, and should be used in different contexts. The `affinity_probability_binary` field should be used to detect binders from decoys, for example in a hit-discovery stage. It's value ranges from 0 to 1 and represents the predicted probability that the ligand is a binder. The `affinity_pred_value` aims to measure the specific affinity of different binders and how this changes with small modifications of the molecule. This should be used in ligand optimization stages such as hit-to-lead and lead-optimization. It reports a binding affinity value as `log(IC50)`, derived from an `IC50` measured in `μM`. More details on how to run affinity predictions and parse the output can be found in our [prediction instructions](docs/prediction.md).
 
+### Batch inference
+
+When you have multiple protein–ligand complexes to evaluate, Boltz can process them in tensor batches to fully utilize GPU and speed up prediction.
+
+```
+boltz predict input_path --use_msa_server --batch_size 8
+```
+
+### Screening multiple ligands against one protein (screening mode)
+
+When you have many candidate ligands for the same protein (virtual screening / hit discovery), Boltz can reuse the protein msa preprocessing.
+
+```
+boltz predict input_path --use_msa_server --screening_mode
+```
+
 ## Authentication to MSA Server
 
 When using the `--use_msa_server` option with a server that requires authentication, you can provide credentials in one of two ways. More information is available in our [prediction instructions](docs/prediction.md).
