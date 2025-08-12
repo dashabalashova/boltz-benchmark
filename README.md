@@ -53,15 +53,15 @@ There are two main predictions in the affinity output: `affinity_pred_value` and
 
 ### Batch inference
 
-When you have multiple protein–ligand complexes to evaluate, Boltz can process them in tensor batches to fully utilize GPU and speed up prediction.
+When you have multiple independent protein–ligand complexes to evaluate, Boltz can process them in tensor batches to fully utilize the GPU and reduce total runtime.
 
 ```
 boltz predict input_path --use_msa_server --batch_size 8
 ```
 
-### Screening multiple ligands against one protein + batch inference
+### Screening multiple ligands against one protein (screening mode)
 
-When you have many candidate ligands for the same protein (virtual screening / hit discovery), Boltz can reuse the protein msa preprocessing.
+When you have many candidate ligands for the same protein (virtual screening / hit discovery), Boltz can reuse the results of protein MSA preprocessing and then perform a batched pass over the ligands.
 
 ```
 boltz predict input_path --use_msa_server --screening_mode --batch_size 8
