@@ -59,12 +59,12 @@ When you have multiple protein–ligand complexes to evaluate, Boltz can process
 boltz predict input_path --use_msa_server --batch_size 8
 ```
 
-### Screening multiple ligands against one protein (screening mode)
+### Screening multiple ligands against one protein + batch inference
 
 When you have many candidate ligands for the same protein (virtual screening / hit discovery), Boltz can reuse the protein msa preprocessing.
 
 ```
-boltz predict input_path --use_msa_server --screening_mode
+boltz predict input_path --use_msa_server --screening_mode --batch_size 8
 ```
 
 ## Authentication to MSA Server
