@@ -10,6 +10,7 @@ from functools import partial
 from multiprocessing import Pool
 from pathlib import Path
 from typing import Literal, Optional
+import shutil
 
 import click
 import torch
@@ -30,6 +31,7 @@ from boltz.data.parse.fasta import parse_fasta
 from boltz.data.parse.yaml import parse_yaml
 from boltz.data.types import MSA, Manifest, Record
 from boltz.data.write.writer import BoltzAffinityWriter, BoltzWriter
+from boltz.data.write.writer_batched import BoltzWriter_batched, BoltzAffinityWriter_batched
 from boltz.model.models.boltz1 import Boltz1
 from boltz.model.models.boltz2 import Boltz2
 
@@ -583,19 +585,20 @@ def process_input(  # noqa: C901, PLR0912, PLR0915, D103
             raise RuntimeError(msg)  # noqa: TRY301
 
         if to_generate:
-            msg = f"Generating MSA for {path} with {len(to_generate)} protein entities."
-            click.echo(msg)
-            compute_msa(
-                data=to_generate,
-                target_id=target_id,
-                msa_dir=msa_dir,
-                msa_server_url=msa_server_url,
-                msa_pairing_strategy=msa_pairing_strategy,
-                msa_server_username=msa_server_username,
-                msa_server_password=msa_server_password,
-                api_key_header=api_key_header,
-                api_key_value=api_key_value,
-            )
+            if not (msa_dir / f"{target_id}_0.csv").exists():
+                msg = f"Generating MSA for {path} with {len(to_generate)} protein entities."
+                click.echo(msg)
+                compute_msa(
+                    data=to_generate,
+                    target_id=target_id,
+                    msa_dir=msa_dir,
+                    msa_server_url=msa_server_url,
+                    msa_pairing_strategy=msa_pairing_strategy,
+                    msa_server_username=msa_server_username,
+                    msa_server_password=msa_server_password,
+                    api_key_header=api_key_header,
+                    api_key_value=api_key_value,
+                )
 
         # Parse MSA data
         msas = sorted({c.msa_id for c in target.record.chains if c.msa_id != -1})
@@ -995,6 +998,12 @@ def cli() -> None:
     help="Whether to add the Molecular Weight correction to the affinity value head.",
 )
 @click.option(
+    "--recycling_steps_affinity",
+    type=int,
+    help="The number of recycling steps to use for affinity prediction. Default is 5.",
+    default=5,
+)
+@click.option(
     "--sampling_steps_affinity",
     type=int,
     help="The number of sampling steps to use for affinity prediction. Default is 200.",
@@ -1039,6 +1048,18 @@ def cli() -> None:
     is_flag=True,
     help=" to dump the s and z embeddings into a npz file. Default is False.",
 )
+@click.option(
+    "--screening_mode",
+    is_flag=True,
+    type=bool,
+    help="Whether to run screening mode (unique protein with many ligands).",
+)
+@click.option(
+    "--batch_size",
+    type=int,
+    help="Batch size.",
+    default=1,
+)
 def predict(  # noqa: C901, PLR0915, PLR0912
     data: str,
     out_dir: str,
@@ -1050,6 +1071,7 @@ def predict(  # noqa: C901, PLR0915, PLR0912
     recycling_steps: int = 3,
     sampling_steps: int = 200,
     diffusion_samples: int = 1,
+    recycling_steps_affinity: int = 5,
     sampling_steps_affinity: int = 200,
     diffusion_samples_affinity: int = 3,
     max_parallel_samples: Optional[int] = None,
@@ -1077,7 +1099,16 @@ def predict(  # noqa: C901, PLR0915, PLR0912
     num_subsampled_msa: int = 1024,
     no_kernels: bool = False,
     write_embeddings: bool = False,
+    screening_mode: bool = False,
+    batch_size: int = 1
 ) -> None:
+    
+    import boltz.model.layers.initialize as init
+    init.bias_init_one_ = lambda x: None
+    init.bias_init_zero_ = lambda x: None
+    init.lecun_normal_init_ = lambda x: None
+    init.final_init_ = lambda x: None
+
     """Run predictions with Boltz."""
     # If cpu, write a friendly warning
     if accelerator == "cpu":
@@ -1142,6 +1173,41 @@ def predict(  # noqa: C901, PLR0915, PLR0912
     else:
         msg = f"Model {model} not supported. Supported: boltz1, boltz2."
         raise ValueError(f"Model {model} not supported.")
+
+    if screening_mode:
+        yamls = sorted([f for f in data.iterdir() if f.suffix == '.yaml'])
+        data_prot = yamls[0]
+        y_prot_id = data_prot.stem
+        ccd_path = cache / "ccd.pkl"
+        mol_dir = cache / "mols"
+        
+        data_prot = check_inputs(data_prot)
+        process_inputs(
+            data=data_prot,
+            out_dir=out_dir,
+            ccd_path=ccd_path,
+            mol_dir=mol_dir,
+            use_msa_server=True,
+            msa_server_url=msa_server_url,
+            msa_pairing_strategy=msa_pairing_strategy,
+            boltz2=True,
+        )
+        msa_dir = out_dir / "msa"
+        for y in yamls[1:]:
+            y_id = y.stem
+            src = msa_dir / f"{y_prot_id}_0.csv"
+            dst = msa_dir / f"{y_id}_0.csv"
+            shutil.copy(src, dst)
+        if (msa_dir / f"{y_prot_id}_1.csv").exists():
+            for y in yamls[1:]:
+                y_id = y.stem
+                src = msa_dir / f"{y_prot_id}_1.csv"
+                dst = msa_dir / f"{y_id}_1.csv"
+                shutil.copy(src, dst)
+        
+        processed_dir = out_dir / "processed"
+        if processed_dir.exists() and processed_dir.is_dir():
+            shutil.rmtree(processed_dir)
 
     # Validate inputs
     data = check_inputs(data)
@@ -1244,13 +1310,22 @@ def predict(  # noqa: C901, PLR0915, PLR0912
     )
 
     # Create prediction writer
-    pred_writer = BoltzWriter(
-        data_dir=processed.targets_dir,
-        output_dir=out_dir / "predictions",
-        output_format=output_format,
-        boltz2=model == "boltz2",
-        write_embeddings=write_embeddings,
-    )
+    if batch_size==1:
+        pred_writer = BoltzWriter(
+            data_dir=processed.targets_dir,
+            output_dir=out_dir / "predictions",
+            output_format=output_format,
+            boltz2=model == "boltz2",
+            write_embeddings=write_embeddings,
+        )
+    else:
+        pred_writer = BoltzWriter_batched(
+            data_dir=processed.targets_dir,
+            output_dir=out_dir / "predictions",
+            output_format=output_format,
+            boltz2=model == "boltz2",
+            write_embeddings=write_embeddings,
+        )
 
     # Set up trainer
     trainer = Trainer(
@@ -1279,6 +1354,7 @@ def predict(  # noqa: C901, PLR0915, PLR0912
                 template_dir=processed.template_dir,
                 extra_mols_dir=processed.extra_mols_dir,
                 override_method=method,
+                batch_size=batch_size
             )
         else:
             data_module = BoltzInferenceDataModule(
@@ -1351,10 +1427,16 @@ def predict(  # noqa: C901, PLR0915, PLR0912
         msg += "s." if len(manifest_filtered.records) > 1 else "."
         click.echo(msg)
 
-        pred_writer = BoltzAffinityWriter(
-            data_dir=processed.targets_dir,
-            output_dir=out_dir / "predictions",
-        )
+        if batch_size==1:
+            pred_writer = BoltzAffinityWriter(
+                data_dir=processed.targets_dir,
+                output_dir=out_dir / "predictions",
+            )
+        else:
+            pred_writer = BoltzAffinityWriter_batched(
+                data_dir=processed.targets_dir,
+                output_dir=out_dir / "predictions",
+            )
 
         data_module = Boltz2InferenceDataModule(
             manifest=manifest_filtered,
@@ -1367,10 +1449,11 @@ def predict(  # noqa: C901, PLR0915, PLR0912
             extra_mols_dir=processed.extra_mols_dir,
             override_method="other",
             affinity=True,
+            batch_size=batch_size
         )
 
         predict_affinity_args = {
-            "recycling_steps": 5,
+            "recycling_steps": recycling_steps_affinity,
             "sampling_steps": sampling_steps_affinity,
             "diffusion_samples": diffusion_samples_affinity,
             "max_parallel_samples": 1,
