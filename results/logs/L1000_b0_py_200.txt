@@ -1,0 +1,24 @@
+Start: 2025-09-04T19:32:15Z (epoch=1757014335.370141786)
+Checking input data.
+Processing 16 inputs with 16 threads.
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:00<00:11,  1.27it/s] 81%|████████▏ | 13/16 [00:00<00:00, 19.21it/s]100%|██████████| 16/16 [00:00<00:00, 17.82it/s]
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+/home/dasha/boltz/.venvs/boltz/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:76: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `pytorch_lightning` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+Running structure prediction for 16 inputs.
+/home/dasha/boltz/.venvs/boltz/lib/python3.12/site-packages/pytorch_lightning/utilities/migration/utils.py:56: The loaded checkpoint was produced with Lightning v2.5.0.post0, which is newer than your current Lightning version: v2.5.0
+You are using a CUDA device ('NVIDIA H200') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/16 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/16 [00:00<?, ?it/s]Predicting DataLoader 0:   6%|▋         | 1/16 [00:08<02:07,  0.12it/s]Predicting DataLoader 0:  12%|█▎        | 2/16 [00:14<01:42,  0.14it/s]Predicting DataLoader 0:  19%|█▉        | 3/16 [00:20<01:29,  0.15it/s]Predicting DataLoader 0:  25%|██▌       | 4/16 [00:26<01:20,  0.15it/s]Predicting DataLoader 0:  31%|███▏      | 5/16 [00:32<01:11,  0.15it/s]Predicting DataLoader 0:  38%|███▊      | 6/16 [00:38<01:04,  0.15it/s]Predicting DataLoader 0:  44%|████▍     | 7/16 [00:44<00:57,  0.16it/s]Predicting DataLoader 0:  50%|█████     | 8/16 [00:51<00:51,  0.16it/s]Predicting DataLoader 0:  56%|█████▋    | 9/16 [00:57<00:44,  0.16it/s]Predicting DataLoader 0:  62%|██████▎   | 10/16 [01:03<00:37,  0.16it/s]Predicting DataLoader 0:  69%|██████▉   | 11/16 [01:09<00:31,  0.16it/s]Predicting DataLoader 0:  75%|███████▌  | 12/16 [01:15<00:25,  0.16it/s]Predicting DataLoader 0:  81%|████████▏ | 13/16 [01:21<00:18,  0.16it/s]Predicting DataLoader 0:  88%|████████▊ | 14/16 [01:27<00:12,  0.16it/s]Predicting DataLoader 0:  94%|█████████▍| 15/16 [01:33<00:06,  0.16it/s]Predicting DataLoader 0: 100%|██████████| 16/16 [01:39<00:00,  0.16it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|██████████| 16/16 [01:39<00:00,  0.16it/s]
+
+Predicting property: affinity
+
+Checking input data for affinity.
+Running affinity prediction for 16 inputs.
+/home/dasha/boltz/.venvs/boltz/lib/python3.12/site-packages/pytorch_lightning/utilities/migration/utils.py:56: The loaded checkpoint was produced with Lightning v2.5.0.post0, which is newer than your current Lightning version: v2.5.0
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/16 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/16 [00:00<?, ?it/s]Predicting DataLoader 0:   6%|▋         | 1/16 [00:09<02:22,  0.11it/s]Predicting DataLoader 0:  12%|█▎        | 2/16 [00:18<02:12,  0.11it/s]Predicting DataLoader 0:  19%|█▉        | 3/16 [00:28<02:02,  0.11it/s]Predicting DataLoader 0:  25%|██▌       | 4/16 [00:37<01:53,  0.11it/s]Predicting DataLoader 0:  31%|███▏      | 5/16 [00:46<01:42,  0.11it/s]Predicting DataLoader 0:  38%|███▊      | 6/16 [00:56<01:33,  0.11it/s]Predicting DataLoader 0:  44%|████▍     | 7/16 [01:05<01:24,  0.11it/s]Predicting DataLoader 0:  50%|█████     | 8/16 [01:14<01:14,  0.11it/s]Predicting DataLoader 0:  56%|█████▋    | 9/16 [01:24<01:05,  0.11it/s]Predicting DataLoader 0:  62%|██████▎   | 10/16 [01:33<00:56,  0.11it/s]Predicting DataLoader 0:  69%|██████▉   | 11/16 [01:43<00:46,  0.11it/s]Predicting DataLoader 0:  75%|███████▌  | 12/16 [01:52<00:37,  0.11it/s]Predicting DataLoader 0:  81%|████████▏ | 13/16 [02:02<00:28,  0.11it/s]Predicting DataLoader 0:  88%|████████▊ | 14/16 [02:11<00:18,  0.11it/s]Predicting DataLoader 0:  94%|█████████▍| 15/16 [02:20<00:09,  0.11it/s]Predicting DataLoader 0: 100%|██████████| 16/16 [02:30<00:00,  0.11it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|██████████| 16/16 [02:30<00:00,  0.11it/s]

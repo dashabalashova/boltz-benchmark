@@ -1,0 +1,765 @@
+{"timestamp": "2025-09-04T18:41:40.312658", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:41:40.312794", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:41:40.312913", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.200s"}
+{"timestamp": "2025-09-04T18:41:40.312939", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpf_b8aqel"}
+{"timestamp": "2025-09-04T18:41:40.312960", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 17.696s"}
+{"timestamp": "2025-09-04T18:41:40.314201", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:41:40.315587", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"level":"INFO","time":"2025-09-04 18:41:40.315","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:41:41.280","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:41:41.281210", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"timestamp": "2025-09-04T18:41:41.281445", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpfm6ymxok"}
+{"timestamp": "2025-09-04T18:41:41.281475", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:41:41.281549", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:41:41.281595", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:41:41.282187", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:41:41.282529", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpfm6ymxok/ISjs8J.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:41:41.471263", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: ISjs8J"}
+{"timestamp": "2025-09-04T18:41:41.471357", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:41:41.471426", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:41:41.471447", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:41:41.964629", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:41:41.964734", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to ISjs8J_1_msa"}
+{"timestamp": "2025-09-04T18:41:41.964758", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:41:41.969800", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:41:41.969921", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:41:41.969954", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.688s"}
+{"timestamp": "2025-09-04T18:41:41.970051", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:41:41.970079", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:41:41.970096", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:41:41.970109", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:41:41.970121", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:41:41.970133", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:41:41.970145", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:41:41.970158", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:41:41.970201", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:41:41.970220", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:42:19.014914", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 37.045s"}
+{"timestamp": "2025-09-04T18:42:19.017240", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:42:19.017334", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:42:19.017366", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/usr/local/lib/python3.12/dist-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=15` in the `DataLoader` to improve performance.
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]
+{"timestamp": "2025-09-04T18:42:31.412835", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:42:31.412975", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:42:31.413097", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.396s"}
+{"timestamp": "2025-09-04T18:42:31.413127", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpfm6ymxok"}
+{"timestamp": "2025-09-04T18:42:31.413147", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 50.132s"}
+{"timestamp": "2025-09-04T18:42:31.414431", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:42:31.416418", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"level":"INFO","time":"2025-09-04 18:42:31.416","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:42:31.716","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:42:31.716892", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"timestamp": "2025-09-04T18:42:31.717120", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpo73sytq_"}
+{"timestamp": "2025-09-04T18:42:31.717152", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:42:31.717227", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:42:31.717255", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:42:31.717736", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:42:31.718075", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpo73sytq_/dtdD5G.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:42:32.014451", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: dtdD5G"}
+{"timestamp": "2025-09-04T18:42:32.014555", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:42:32.014642", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:42:32.014668", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:42:32.521000", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:42:32.521108", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to dtdD5G_1_msa"}
+{"timestamp": "2025-09-04T18:42:32.521133", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:42:32.526867", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:42:32.526989", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:42:32.527020", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.810s"}
+{"timestamp": "2025-09-04T18:42:32.527119", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:42:32.527145", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:42:32.527162", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:42:32.527175", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:42:32.527187", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:42:32.527200", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:42:32.527211", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:42:32.527226", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:42:32.527272", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:42:32.527289", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:43:10.399388", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 37.872s"}
+{"timestamp": "2025-09-04T18:43:10.401679", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:43:10.401768", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:43:10.401796", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/usr/local/lib/python3.12/dist-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=15` in the `DataLoader` to improve performance.
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]
+{"timestamp": "2025-09-04T18:43:22.749505", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:43:22.749659", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:43:22.749784", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.348s"}
+{"timestamp": "2025-09-04T18:43:22.749816", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpo73sytq_"}
+{"timestamp": "2025-09-04T18:43:22.749836", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 51.033s"}
+{"timestamp": "2025-09-04T18:43:22.751090", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:43:22.753164", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"level":"INFO","time":"2025-09-04 18:43:22.753","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:43:23.052","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:43:23.053740", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"timestamp": "2025-09-04T18:43:23.053963", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpr1d0y4e9"}
+{"timestamp": "2025-09-04T18:43:23.053996", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:43:23.054070", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:43:23.054100", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:43:23.054528", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:43:23.054890", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpr1d0y4e9/7elKPo.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:43:23.306118", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: 7elKPo"}
+{"timestamp": "2025-09-04T18:43:23.306206", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:43:23.306271", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:43:23.306291", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:43:23.800267", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:43:23.800371", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to 7elKPo_1_msa"}
+{"timestamp": "2025-09-04T18:43:23.800393", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:43:23.805999", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:43:23.806124", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:43:23.806157", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.752s"}
+{"timestamp": "2025-09-04T18:43:23.806259", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:43:23.806284", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:43:23.806301", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:43:23.806315", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:43:23.806328", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:43:23.806339", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:43:23.806351", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:43:23.806367", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:43:23.806412", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:43:23.806429", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:44:01.917856", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 38.111s"}
+{"timestamp": "2025-09-04T18:44:01.920170", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:44:01.920264", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:44:01.920292", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:09<00:00,  0.10it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:09<00:00,  0.10it/s]
+{"timestamp": "2025-09-04T18:44:15.183924", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:44:15.184072", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:44:15.184194", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 13.264s"}
+{"timestamp": "2025-09-04T18:44:15.184223", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpr1d0y4e9"}
+{"timestamp": "2025-09-04T18:44:15.184244", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 52.131s"}
+{"timestamp": "2025-09-04T18:44:15.185489", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:44:15.187683", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"level":"INFO","time":"2025-09-04 18:44:15.187","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:44:15.497","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:44:15.498343", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"timestamp": "2025-09-04T18:44:15.498552", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpa2vsgdgv"}
+{"timestamp": "2025-09-04T18:44:15.498599", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:44:15.498668", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:44:15.498701", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:44:15.499193", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:44:15.499544", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpa2vsgdgv/6JJcfO.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:44:15.766964", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: 6JJcfO"}
+{"timestamp": "2025-09-04T18:44:15.767061", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:44:15.767131", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:44:15.767155", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:44:16.285454", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:44:16.285563", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to 6JJcfO_1_msa"}
+{"timestamp": "2025-09-04T18:44:16.285599", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:44:16.291204", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:44:16.291331", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:44:16.291368", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.793s"}
+{"timestamp": "2025-09-04T18:44:16.291464", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:44:16.291490", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:44:16.291506", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:44:16.291519", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:44:16.291532", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:44:16.291544", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:44:16.291557", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:44:16.291584", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:44:16.291636", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:44:16.291661", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/usr/local/lib/python3.12/dist-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=15` in the `DataLoader` to improve performance.
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:44:54.387877", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 38.096s"}
+{"timestamp": "2025-09-04T18:44:54.390267", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:44:54.390363", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:44:54.390393", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:45:06.653312", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:45:06.653451", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:45:06.653563", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.263s"}
+{"timestamp": "2025-09-04T18:45:06.653604", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpa2vsgdgv"}
+{"timestamp": "2025-09-04T18:45:06.653623", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 51.156s"}
+{"timestamp": "2025-09-04T18:45:06.654912", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:45:06.656877", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"level":"INFO","time":"2025-09-04 18:45:06.656","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:45:06.956","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:45:06.957912", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.80GB"}
+{"timestamp": "2025-09-04T18:45:06.958163", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpdcw83ydc"}
+{"timestamp": "2025-09-04T18:45:06.958196", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:45:06.958275", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:45:06.958311", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:45:06.958833", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:45:06.959226", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpdcw83ydc/G5mSoy.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:45:07.293067", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: G5mSoy"}
+{"timestamp": "2025-09-04T18:45:07.293165", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:45:07.293237", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:45:07.293259", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:45:07.807697", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:45:07.807811", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to G5mSoy_1_msa"}
+{"timestamp": "2025-09-04T18:45:07.807836", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:45:07.813736", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:45:07.813864", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:45:07.813900", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.856s"}
+{"timestamp": "2025-09-04T18:45:07.814006", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:45:07.814034", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:45:07.814054", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:45:07.814075", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:45:07.814093", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:45:07.814112", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:45:07.814131", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:45:07.814154", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:45:07.814215", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:45:07.814242", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:32<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:45:46.131028", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 38.317s"}
+{"timestamp": "2025-09-04T18:45:46.133336", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:45:46.133420", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:45:46.133446", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:09<00:00,  0.11it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:09<00:00,  0.11it/s]
+{"timestamp": "2025-09-04T18:45:59.183451", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:45:59.183611", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:45:59.183739", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 13.050s"}
+{"timestamp": "2025-09-04T18:45:59.183769", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpdcw83ydc"}
+{"timestamp": "2025-09-04T18:45:59.183791", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 52.226s"}
+{"timestamp": "2025-09-04T18:45:59.185157", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:45:59.187225", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:45:59.187","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:45:59.488","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:45:59.489152", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:45:59.489368", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmp_bakmoa0"}
+{"timestamp": "2025-09-04T18:45:59.489401", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:45:59.489475", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:45:59.489506", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:45:59.490057", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:45:59.490433", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmp_bakmoa0/OC56aM.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:45:59.740431", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: OC56aM"}
+{"timestamp": "2025-09-04T18:45:59.740517", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:45:59.740587", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:45:59.740608", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:46:00.238423", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:46:00.238537", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to OC56aM_1_msa"}
+{"timestamp": "2025-09-04T18:46:00.238563", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:46:00.243976", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:46:00.244096", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:46:00.244131", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.755s"}
+{"timestamp": "2025-09-04T18:46:00.244237", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:46:00.244267", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:46:00.244284", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:46:00.244299", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:46:00.244312", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:46:00.244324", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:46:00.244339", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:46:00.244355", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:46:00.244403", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:46:00.244427", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/usr/local/lib/python3.12/dist-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=15` in the `DataLoader` to improve performance.
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:46:36.691848", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 36.447s"}
+{"timestamp": "2025-09-04T18:46:36.694179", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:46:36.694266", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:46:36.694298", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:46:48.870251", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:46:48.870387", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:46:48.870512", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.176s"}
+{"timestamp": "2025-09-04T18:46:48.870543", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmp_bakmoa0"}
+{"timestamp": "2025-09-04T18:46:48.870565", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 49.382s"}
+{"timestamp": "2025-09-04T18:46:48.871899", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:46:48.874009", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:46:48.874","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:46:49.174","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:46:49.175460", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:46:49.175749", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpbrv2a19o"}
+{"timestamp": "2025-09-04T18:46:49.175788", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:46:49.175896", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:46:49.175936", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:46:49.176787", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:46:49.177209", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpbrv2a19o/9enq52.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:46:49.376656", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: 9enq52"}
+{"timestamp": "2025-09-04T18:46:49.376741", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:46:49.376804", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:46:49.376823", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:46:49.873791", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:46:49.873898", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to 9enq52_1_msa"}
+{"timestamp": "2025-09-04T18:46:49.873923", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:46:49.879123", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:46:49.879245", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:46:49.879286", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.703s"}
+{"timestamp": "2025-09-04T18:46:49.879395", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:46:49.879423", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:46:49.879440", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:46:49.879453", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:46:49.879467", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:46:49.879483", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:46:49.879500", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:46:49.879520", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:46:49.879586", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:46:49.879614", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:47:27.648202", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 37.768s"}
+{"timestamp": "2025-09-04T18:47:27.650593", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:47:27.650687", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:47:27.650715", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:47:39.964495", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:47:39.964655", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:47:39.964788", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.314s"}
+{"timestamp": "2025-09-04T18:47:39.964819", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpbrv2a19o"}
+{"timestamp": "2025-09-04T18:47:39.964847", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 50.790s"}
+{"timestamp": "2025-09-04T18:47:39.966312", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:47:39.968534", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:47:39.968","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:47:40.272","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:47:40.273475", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:47:40.273785", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmp_jwjl038"}
+{"timestamp": "2025-09-04T18:47:40.273825", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:47:40.273903", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:47:40.273935", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:47:40.274516", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:47:40.274930", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmp_jwjl038/prBHs8.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:47:40.453309", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: prBHs8"}
+{"timestamp": "2025-09-04T18:47:40.453395", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:47:40.453456", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:47:40.453475", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:47:40.945769", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:47:40.945869", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to prBHs8_1_msa"}
+{"timestamp": "2025-09-04T18:47:40.945892", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:47:40.950787", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:47:40.950897", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:47:40.950933", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.677s"}
+{"timestamp": "2025-09-04T18:47:40.951044", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:47:40.951083", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:47:40.951106", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:47:40.951125", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:47:40.951144", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:47:40.951160", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:47:40.951173", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:47:40.951190", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:47:40.951246", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:47:40.951273", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:29<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:48:17.138088", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 36.187s"}
+{"timestamp": "2025-09-04T18:48:17.140362", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:48:17.140451", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:48:17.140480", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:48:29.376371", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:48:29.376507", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:48:29.376643", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.236s"}
+{"timestamp": "2025-09-04T18:48:29.376683", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmp_jwjl038"}
+{"timestamp": "2025-09-04T18:48:29.376706", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 49.104s"}
+{"timestamp": "2025-09-04T18:48:29.377974", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:48:29.379910", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:48:29.380","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:48:29.687","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:48:29.688261", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:48:29.688513", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmp9kcwcvvi"}
+{"timestamp": "2025-09-04T18:48:29.688549", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:48:29.688652", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:48:29.688686", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:48:29.689170", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:48:29.689542", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmp9kcwcvvi/OaYsP6.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:48:29.919159", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: OaYsP6"}
+{"timestamp": "2025-09-04T18:48:29.919240", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:48:29.919300", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:48:29.919319", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:48:30.428698", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:48:30.428805", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to OaYsP6_1_msa"}
+{"timestamp": "2025-09-04T18:48:30.428832", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:48:30.434077", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:48:30.434191", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:48:30.434222", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.746s"}
+{"timestamp": "2025-09-04T18:48:30.434324", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:48:30.434357", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:48:30.434376", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:48:30.434390", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:48:30.434407", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:48:30.434425", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:48:30.434443", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:48:30.434464", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:48:30.434515", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:48:30.434537", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:49:07.903319", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 37.469s"}
+{"timestamp": "2025-09-04T18:49:07.905678", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:49:07.905770", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:49:07.905797", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]
+{"timestamp": "2025-09-04T18:49:20.259992", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:49:20.260138", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:49:20.260259", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.354s"}
+{"timestamp": "2025-09-04T18:49:20.260287", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmp9kcwcvvi"}
+{"timestamp": "2025-09-04T18:49:20.260307", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 50.573s"}
+{"timestamp": "2025-09-04T18:49:20.261622", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:49:20.263652", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:49:20.263","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:49:20.573","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:49:20.574237", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:49:20.574467", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpo3wkees8"}
+{"timestamp": "2025-09-04T18:49:20.574499", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:49:20.574590", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:49:20.574632", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:49:20.575091", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:49:20.575444", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpo3wkees8/q3Ujrn.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:49:20.764790", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: q3Ujrn"}
+{"timestamp": "2025-09-04T18:49:20.764885", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:49:20.764955", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:49:20.764977", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:49:21.274997", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:49:21.275106", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to q3Ujrn_1_msa"}
+{"timestamp": "2025-09-04T18:49:21.275129", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:49:21.280307", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:49:21.280430", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:49:21.280465", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.706s"}
+{"timestamp": "2025-09-04T18:49:21.280587", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:49:21.280627", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:49:21.280653", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:49:21.280671", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:49:21.280684", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:49:21.280698", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:49:21.280711", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:49:21.280728", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:49:21.280777", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:49:21.280796", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:29<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:29<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:49:56.803684", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 35.523s"}
+{"timestamp": "2025-09-04T18:49:56.806061", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:49:56.806146", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:49:56.806177", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:50:09.071076", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:50:09.071219", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:50:09.071343", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.265s"}
+{"timestamp": "2025-09-04T18:50:09.071373", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpo3wkees8"}
+{"timestamp": "2025-09-04T18:50:09.071519", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 48.498s"}
+{"timestamp": "2025-09-04T18:50:09.072820", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:50:09.074902", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:50:09.075","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:50:09.379","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:50:09.380545", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:50:09.380814", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmp_wlstqpn"}
+{"timestamp": "2025-09-04T18:50:09.380849", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:50:09.380921", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:50:09.380957", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:50:09.381399", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:50:09.381782", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmp_wlstqpn/mNqE40.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:50:10.020808", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: mNqE40"}
+{"timestamp": "2025-09-04T18:50:10.020909", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:50:10.020980", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:50:10.020997", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:50:10.538854", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:50:10.538957", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to mNqE40_1_msa"}
+{"timestamp": "2025-09-04T18:50:10.538979", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:50:10.544286", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:50:10.544399", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:50:10.544432", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 1.164s"}
+{"timestamp": "2025-09-04T18:50:10.544518", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:50:10.544543", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:50:10.544561", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:50:10.544592", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:50:10.544612", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:50:10.544625", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:50:10.544638", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:50:10.544654", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:50:10.544693", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:50:10.544713", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:50:47.097054", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 36.552s"}
+{"timestamp": "2025-09-04T18:50:47.099368", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:50:47.099455", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:50:47.099482", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]
+{"timestamp": "2025-09-04T18:50:59.689403", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:50:59.689541", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:50:59.689669", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.590s"}
+{"timestamp": "2025-09-04T18:50:59.689700", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmp_wlstqpn"}
+{"timestamp": "2025-09-04T18:50:59.689722", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 50.310s"}
+{"timestamp": "2025-09-04T18:50:59.690951", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:50:59.692930", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:50:59.693","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:50:59.982","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:50:59.983125", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:50:59.983316", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpiyq2qzxh"}
+{"timestamp": "2025-09-04T18:50:59.983344", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:50:59.983407", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:50:59.983436", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:50:59.983878", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:50:59.984220", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpiyq2qzxh/NZcui8.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:51:00.209158", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: NZcui8"}
+{"timestamp": "2025-09-04T18:51:00.209246", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:51:00.209314", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:51:00.209337", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:51:00.710117", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:51:00.710216", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to NZcui8_1_msa"}
+{"timestamp": "2025-09-04T18:51:00.710238", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:51:00.715424", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:51:00.715532", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:51:00.715566", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.732s"}
+{"timestamp": "2025-09-04T18:51:00.715686", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:51:00.715713", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:51:00.715729", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:51:00.715742", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:51:00.715755", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:51:00.715767", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:51:00.715778", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:51:00.715793", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:51:00.715843", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:51:00.715860", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/usr/local/lib/python3.12/dist-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=15` in the `DataLoader` to improve performance.
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:51:37.642300", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 36.926s"}
+{"timestamp": "2025-09-04T18:51:37.644646", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:51:37.644744", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:51:37.644773", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.11it/s]
+{"timestamp": "2025-09-04T18:51:50.066716", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:51:50.066867", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:51:50.066982", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.422s"}
+{"timestamp": "2025-09-04T18:51:50.067009", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpiyq2qzxh"}
+{"timestamp": "2025-09-04T18:51:50.067031", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 50.084s"}
+{"timestamp": "2025-09-04T18:51:50.068174", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:51:50.070401", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:51:50.070","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:51:50.377","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:51:50.378454", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:51:50.378705", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmp8qgz56od"}
+{"timestamp": "2025-09-04T18:51:50.378738", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:51:50.378815", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:51:50.378847", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:51:50.379333", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:51:50.379703", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmp8qgz56od/TIAae2.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:51:50.560226", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: TIAae2"}
+{"timestamp": "2025-09-04T18:51:50.560325", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:51:50.560395", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:51:50.560416", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:51:51.078010", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:51:51.078119", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to TIAae2_1_msa"}
+{"timestamp": "2025-09-04T18:51:51.078146", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:51:51.083664", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:51:51.083775", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:51:51.083827", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.705s"}
+{"timestamp": "2025-09-04T18:51:51.083933", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:51:51.083964", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:51:51.083982", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:51:51.083997", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:51:51.084011", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:51:51.084024", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:51:51.084036", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:51:51.084053", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:51:51.084098", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:51:51.084117", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:29<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:29<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:52:27.314595", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 36.230s"}
+{"timestamp": "2025-09-04T18:52:27.316899", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:52:27.316983", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:52:27.317011", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:52:39.485720", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:52:39.485871", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:52:39.485992", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.169s"}
+{"timestamp": "2025-09-04T18:52:39.486020", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmp8qgz56od"}
+{"timestamp": "2025-09-04T18:52:39.486042", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 49.108s"}
+{"timestamp": "2025-09-04T18:52:39.487309", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:52:39.489432", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:52:39.489","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:52:39.800","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:52:39.801408", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:52:39.801705", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmp01p75zv2"}
+{"timestamp": "2025-09-04T18:52:39.801747", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:52:39.801839", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:52:39.801885", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:52:39.802672", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:52:39.803073", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmp01p75zv2/jcwIAc.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:52:39.984520", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: jcwIAc"}
+{"timestamp": "2025-09-04T18:52:39.984628", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:52:39.984700", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:52:39.984721", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:52:40.508397", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:52:40.508512", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to jcwIAc_1_msa"}
+{"timestamp": "2025-09-04T18:52:40.508538", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:52:40.514083", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:52:40.514205", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:52:40.514255", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.713s"}
+{"timestamp": "2025-09-04T18:52:40.514385", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:52:40.514419", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:52:40.514438", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:52:40.514453", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:52:40.514467", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:52:40.514479", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:52:40.514492", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:52:40.514508", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:52:40.514566", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:52:40.514611", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:53:17.316172", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 36.801s"}
+{"timestamp": "2025-09-04T18:53:17.318408", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:53:17.318496", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:53:17.318521", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:53:29.609791", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:53:29.609933", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:53:29.610055", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.292s"}
+{"timestamp": "2025-09-04T18:53:29.610080", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmp01p75zv2"}
+{"timestamp": "2025-09-04T18:53:29.610100", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 49.809s"}
+{"timestamp": "2025-09-04T18:53:29.611425", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:53:29.613511", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:53:29.613","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:53:29.919","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:53:29.920816", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:53:29.921059", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpfhhpokjz"}
+{"timestamp": "2025-09-04T18:53:29.921090", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:53:29.921167", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:53:29.921199", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:53:29.921763", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:53:29.922123", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpfhhpokjz/3X13np.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:53:30.149928", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: 3X13np"}
+{"timestamp": "2025-09-04T18:53:30.150024", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:53:30.150095", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:53:30.150119", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:53:30.658554", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:53:30.658686", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to 3X13np_1_msa"}
+{"timestamp": "2025-09-04T18:53:30.658714", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:53:30.664237", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:53:30.664361", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:53:30.664392", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.743s"}
+{"timestamp": "2025-09-04T18:53:30.664493", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:53:30.664519", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:53:30.664536", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:53:30.664549", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:53:30.664562", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:53:30.664593", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:53:30.664613", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:53:30.664629", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:53:30.664673", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:53:30.664691", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:31<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:54:08.227351", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 37.562s"}
+{"timestamp": "2025-09-04T18:54:08.229558", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:54:08.229659", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:54:08.229687", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:54:20.506075", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:54:20.506212", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:54:20.506342", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.277s"}
+{"timestamp": "2025-09-04T18:54:20.506374", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpfhhpokjz"}
+{"timestamp": "2025-09-04T18:54:20.506404", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 50.586s"}
+{"timestamp": "2025-09-04T18:54:20.507786", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:54:20.510033", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:54:20.510","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}
+{"level":"INFO","time":"2025-09-04 18:54:20.818","file_name":"inference.py","line_number":653,"message":"/biology/mit/boltz2/predict called"}
+{"timestamp": "2025-09-04T18:54:20.819349", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"timestamp": "2025-09-04T18:54:20.819618", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Created prediction temp directory: /tmp/tmpqsj5haq5/tmpbgyup4zh"}
+{"timestamp": "2025-09-04T18:54:20.819655", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting input preparation"}
+{"timestamp": "2025-09-04T18:54:20.819743", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Starting prep_inputs_schematized"}
+{"timestamp": "2025-09-04T18:54:20.819776", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Cleaning MSA..."}
+{"timestamp": "2025-09-04T18:54:20.820362", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Done"}
+{"timestamp": "2025-09-04T18:54:20.820761", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Wrote schema to /tmp/tmpqsj5haq5/tmpbgyup4zh/vI28U5.yaml"}
+Found explicit empty MSA for some proteins, will run these in single sequence mode. Keep in mind that the model predictions will be suboptimal without an MSA.
+{"timestamp": "2025-09-04T18:54:21.015599", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Target ID is: vI28U5"}
+{"timestamp": "2025-09-04T18:54:21.015703", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSAs for protein chains"}
+{"timestamp": "2025-09-04T18:54:21.015775", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing MSA for A (entity 1)"}
+{"timestamp": "2025-09-04T18:54:21.015806", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processing a3m MSA from uniref90"}
+{"timestamp": "2025-09-04T18:54:21.547123", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Processed MSAs for 1 chains"}
+{"timestamp": "2025-09-04T18:54:21.547229", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for protein chain A to vI28U5_1_msa"}
+{"timestamp": "2025-09-04T18:54:21.547251", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Set MSA ID for non-protein chain B to -1"}
+{"timestamp": "2025-09-04T18:54:21.552700", "level": "INFO", "logger": "lib.boltz_assist.prep_inputs", "message": "Input preparation succeeded."}
+{"timestamp": "2025-09-04T18:54:21.552845", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed successfully"}
+{"timestamp": "2025-09-04T18:54:21.552888", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Input preparation completed in 0.733s"}
+{"timestamp": "2025-09-04T18:54:21.553007", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "DataLoader Configuration:"}
+{"timestamp": "2025-09-04T18:54:21.553036", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Workers: 1"}
+{"timestamp": "2025-09-04T18:54:21.553060", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  File sharing: False"}
+{"timestamp": "2025-09-04T18:54:21.553080", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Pin memory: True"}
+{"timestamp": "2025-09-04T18:54:21.553098", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Prefetch factor: 1"}
+{"timestamp": "2025-09-04T18:54:21.553117", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Persistent workers: True"}
+{"timestamp": "2025-09-04T18:54:21.553137", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Source: default"}
+{"timestamp": "2025-09-04T18:54:21.553159", "level": "INFO", "logger": "lib.boltz_assist.dataloader_config", "message": "  Shared memory: 1024.0MB (sufficient: True)"}
+{"timestamp": "2025-09-04T18:54:21.553216", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Using standard DataModule configuration (no advanced optimizations available)"}
+{"timestamp": "2025-09-04T18:54:21.553242", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "DataLoader setup completed in 0.000s"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:30<00:00,  0.03it/s]
+{"timestamp": "2025-09-04T18:54:58.675358", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Model inference completed in 37.122s"}
+{"timestamp": "2025-09-04T18:54:58.677750", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Post-processing completed in 0.002s"}
+{"timestamp": "2025-09-04T18:54:58.677844", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction requested, running affinity model"}
+{"timestamp": "2025-09-04T18:54:58.677872", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Starting affinity prediction"}
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: |                                                     | 0/? [00:00<?, ?it/s]Predicting:   0%|                                                 | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|                                    | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|████████████████████████████| 1/1 [00:08<00:00,  0.12it/s]
+{"timestamp": "2025-09-04T18:55:10.914290", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed successfully"}
+{"timestamp": "2025-09-04T18:55:10.914435", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Creating affinity prediction for ligand B"}
+{"timestamp": "2025-09-04T18:55:10.914562", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Affinity prediction completed in 12.237s"}
+{"timestamp": "2025-09-04T18:55:10.914602", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Completing prediction, temp directory will be cleaned up: /tmp/tmpqsj5haq5/tmpbgyup4zh"}
+{"timestamp": "2025-09-04T18:55:10.914629", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Total prediction time: 50.096s"}
+{"timestamp": "2025-09-04T18:55:10.916018", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Response construction completed in 0.001s"}
+{"timestamp": "2025-09-04T18:55:10.917997", "level": "INFO", "logger": "lib.boltz_assist.boltz_pipeline", "message": "Temp file tracking - Open FDs: 1, /tmp free: 445.79GB"}
+{"level":"INFO","time":"2025-09-04 18:55:10.918","file_name":"inference.py","line_number":659,"message":"Boltz2 Inference completed."}

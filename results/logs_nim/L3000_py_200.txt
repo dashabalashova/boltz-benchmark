@@ -1,0 +1,82 @@
+Start: 2025-09-04T18:41:40Z (epoch=1757011300.865161165)
+No uniref.a3m found at examples/msa/uniref.a3m - will inline minimal MSA from sequence if needed.
+▶ Processing examples/yamls_L3000/casp16_L3001.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (50.46s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3003.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (51.33s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3009.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (52.43s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3019.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (51.46s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3021.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (52.52s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3024.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (49.68s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3026.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (51.09s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3027.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (49.41s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3028.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (50.88s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3031.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (48.81s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3035.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (50.61s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3037.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (50.37s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3038.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (49.41s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3039.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (50.12s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3042.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (50.89s). Saving response.
+▶ Processing examples/yamls_L3000/casp16_L3043.yaml
+  id=A, seq_len=863, sampling_steps=200
+POST -> http://localhost:8000/biology/mit/boltz2/predict
+payload keys: ['polymers', 'ligands', 'recycling_steps', 'sampling_steps', 'diffusion_samples', 'step_scale', 'without_potentials']
+  ✔ Success (50.4s). Saving response.

@@ -1,0 +1,5 @@
+name,yaml_dir,sampling_steps,start_ts,end_ts,elapsed_s,py_exit_code,py_log
+L1000,examples/yamls_L1000,200,2025-09-04T19:32:15Z,2025-09-04T19:37:11Z,295.956,0,logs/L1000_b0_py_200.txt
+L1000,examples/yamls_L1000,10,2025-09-04T19:37:11Z,2025-09-04T19:40:56Z,225.075,0,logs/L1000_b0_py_10.txt
+L3000,examples/yamls_L3000,200,2025-09-04T19:40:57Z,2025-09-04T19:49:48Z,531.303,0,logs/L3000_b0_py_200.txt
+L3000,examples/yamls_L3000,10,2025-09-04T19:49:49Z,2025-09-04T19:56:27Z,398.096,0,logs/L3000_b0_py_10.txt

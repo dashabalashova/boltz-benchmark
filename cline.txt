@@ -1,0 +1,77 @@
+🌿🌿🌿🌿🌿 boltz 🌿🌿🌿🌿🌿
+
+recycling_steps: int = 3
+sampling_steps: int = 200
+diffusion_samples: int = 1
+sampling_steps_affinity: int = 200
+diffusion_samples_affinity: int = 3
+predict_affinity_args = {"recycling_steps": 5}
+
+🌿 command line 🌿
+
+git clone https://github.com/jwohlwend/boltz/
+
+🌿 VSCode 🌿
+
+cd /home/dasha/boltz
+python3 -m venv .venvs/boltz
+source .venvs/boltz/bin/activate
+pip install -e .[cuda]
+
+screen -S screen1
+source .venvs/boltz/bin/activate
+chmod +x runs/casp16/run.sh
+runs/casp16/run.sh
+
+🌿🌿🌿🌿🌿 🌿🌿🌿🌿🌿 🌿🌿🌿🌿🌿
+
+🌿🌿🌿🌿🌿 boltz2-b 🌿🌿🌿🌿🌿
+
+🌿 command line 🌿
+
+git clone https://github.com/dashabalashova/boltz-screen
+mv boltz-screen boltz2-b
+
+🌿 VSCode 🌿
+
+cd /home/dasha/boltz2-b
+python3 -m venv .venvs/boltz2-b
+source .venvs/boltz2-b/bin/activate
+pip install -e .[cuda]
+
+screen -S screen2
+source .venvs/boltz2-b/bin/activate
+chmod +x runs/casp16_b/run.sh
+runs/casp16_b/run.sh
+
+🌿🌿🌿🌿🌿 🌿🌿🌿🌿🌿 🌿🌿🌿🌿🌿
+
+🌿🌿🌿🌿🌿 boltz2-nim 🌿🌿🌿🌿🌿
+
+🌿 command line 🌿
+
+mkdir boltz2-nim
+
+🌿 VSCode 🌿
+
+python3 deactivate
+
+cd /home/dasha/boltz2-nim
+docker login nvcr.io
+export NGC_API_KEY=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
+export LOCAL_NIM_CACHE=~/.cache/nim
+mkdir -p $LOCAL_NIM_CACHE
+chmod -R 777 $LOCAL_NIM_CACHE
+docker pull nvcr.io/nim/mit/boltz2:latest
+
+docker run -it \
+  --gpus all \
+  -p 8000:8000 \
+  -e NGC_API_KEY \
+  -v "$HOME/.cache/nim":/opt/nim/.cache \
+  --name boltz2nim \
+  nvcr.io/nim/mit/boltz2:latest
+
+screen -S screen3
+chmod +x runs/casp16_nim/run.sh
+runs/casp16_nim/run.sh
