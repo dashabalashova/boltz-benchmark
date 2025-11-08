@@ -20,9 +20,14 @@ screen -S screen1
 source .venvs/boltz/bin/activate
 mkdir -p runs/casp16/
 cp ../boltz-benchmark/runs/casp16/run.sh runs/casp16/run.sh
+cp -r ../boltz-benchmark/data/processed/examples/msa examples
+cp -r ../boltz-benchmark/data/processed/examples/yamls_L1000 examples
+cp -r ../boltz-benchmark/data/processed/examples/yamls_L3000 examples
 chmod +x runs/casp16/run.sh
 runs/casp16/run.sh
-python3 deactivate
+# Ctrl+a+d
+
+deactivate
 cd ..
 ```
 
