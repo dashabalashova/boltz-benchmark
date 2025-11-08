@@ -35,7 +35,7 @@ cd ..
 
 run predictions
 ```
-git clone https://github.com/dashabalashova/boltz-screen
+git clone https://github.com/dashabalashova/boltz-screen.git
 mv boltz-screen boltz2-b
 cd boltz2-b
 
@@ -47,9 +47,14 @@ screen -S screen2
 source .venvs/boltz2-b/bin/activate
 mkdir -p runs/casp16_b/
 cp ../boltz-benchmark/runs/casp16_b/run.sh runs/casp16_b/run.sh
+cp -r ../boltz-benchmark/data/processed/examples/msa examples
+cp -r ../boltz-benchmark/data/processed/examples/yamls_L1000 examples
+cp -r ../boltz-benchmark/data/processed/examples/yamls_L3000 examples
 chmod +x runs/casp16_b/run.sh
 runs/casp16_b/run.sh
-python3 deactivate
+# Ctrl+a+d
+
+deactivate
 cd ..
 ```
 
