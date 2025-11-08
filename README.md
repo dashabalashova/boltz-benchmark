@@ -66,7 +66,7 @@ mkdir boltz2-nim
 cd boltz2-nim
 
 docker login nvcr.io
-export NGC_API_KEY=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
+export NGC_API_KEY=<nvapi-...>
 export LOCAL_NIM_CACHE=~/.cache/nim
 mkdir -p $LOCAL_NIM_CACHE
 chmod -R 777 $LOCAL_NIM_CACHE
