@@ -80,12 +80,19 @@ docker run -it \
   --name boltz2nim \
   nvcr.io/nim/mit/boltz2:latest
 
+# new terminal
+cd boltz2-nim
 screen -S screen3
 mkdir -p runs/casp16_nim/
 cp ../boltz-benchmark/runs/casp16_nim/run.sh runs/casp16_nim/run.sh
 cp ../boltz-benchmark/runs/casp16_nim/casp16.py runs/casp16_nim/casp16.py
+cp -r ../boltz-benchmark/data/processed/examples/msa examples
+cp -r ../boltz-benchmark/data/processed/examples/yamls_L1000 examples
+cp -r ../boltz-benchmark/data/processed/examples/yamls_L3000 examples
 chmod +x runs/casp16_nim/run.sh
 runs/casp16_nim/run.sh
+# Ctrl+a+d
+
 cd ..
 ```
 
@@ -100,9 +107,14 @@ scripts/collect_affinities.sh
 
 copy logs
 ```
-cp -r ../boltz/logs results/logs
-cp -r ../boltz2-b/logs results/logs_b4
-cp -r ../boltz2-nim/logs results/logs_nim
+mkdir -p results/logs
+cp -a ../boltz/logs/. results/logs/
+
+mkdir -p results/logs_b4
+cp -a ../boltz2-b/logs/. results/logs_b4/
+
+mkdir -p results/logs_nim
+cp -a ../boltz2-nim/logs/. results/logs_nim/
 ```
 
 run notebooks:
